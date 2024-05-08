@@ -28,15 +28,16 @@ const ProductList = () => {
     if (error) return <p>{error}</p>;
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {products.map(product => (
                 <div key={product.id} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                    <img
+                    <img 
+                        className="h-64 w-full object-cover"
                         src={product.image}
                         alt={product.title}
                         style={{ width: '100%', height: 'auto' }}
                     />
-                    <div className="px-6 py-4">
+                    <div className="p-4">
                         <div className="font-bold text-xl mb-2">{product.title}</div>
                         <p className="text-gray-700 text-base">{product.description}</p>
                         <div className="flex items-center mt-2">
@@ -49,11 +50,11 @@ const ProductList = () => {
                             )}
                         </div>
                     </div>
-                    <div className="px-6 pt-4 pb-2">
+                    <div className="px-4 pb-4">
                         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                             {product.price.toFixed(2)} TL
                         </span>
-                        <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                        <button className="mt-auto bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                             Sepete Ekle
                         </button>
                     </div>

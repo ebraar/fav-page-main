@@ -9,13 +9,8 @@ export default function Home() {
       <>
       <Navbar/>
       <Buttons/>
-      <div className="container mx-auto px-4 py-4">
-        <div className="">
-          {/* Ürün kartlarınız buraya gelecek */}
-          <ProductCard />
-        
-          {/* Diğer ürün kartları */}
-        </div>
+      <div className="mx-auto px-4 py-4 container">
+        <ProductCard />
       </div>
       </>
     );
