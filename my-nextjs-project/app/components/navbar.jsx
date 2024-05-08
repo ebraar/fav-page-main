@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { FaHeart } from "react-icons/fa";
 import { MdCollectionsBookmark } from "react-icons/md";
-import { IoIosSearch } from "react-icons/io";
 
 function Navbar () {
     return (
@@ -11,20 +10,12 @@ function Navbar () {
               <div className='flex flex-wrap gap-4'>
                 <div>
                   <Link href={"/"} >
-                    <div className='flex items-center gap-1 hover:text-orange-500'>
-                      <FaHeart/>
+                    <div className='flex items-center gap-1 hover:text-orange-500 pl-10 md:text-center'>
+                      <FaHeart className="text-orange-500"/>
                       <p className="text-gray-500 hover:text-orange-500 font-bold text-lg">Favorilerim</p>
                     </div>
                   </Link>
                 </div>
-                <div className='flex ml-4'>
-                  <Link href={"/collection"} >
-                    <div className='flex items-center gap-1 hover:text-orange-500'>
-                  <MdCollectionsBookmark />
-                      <p className="text-gray-500 hover:text-orange-500 font-bold text-lg">Koleksiyonlarım</p>
-                      </div>
-                  </Link>
-                  </div>
               </div>
 
               {/* Sağ Taraftaki Arama Kutusu */}
