@@ -1,1 +1,1 @@
-# fav-page-trendyol
+# fav-page-main
